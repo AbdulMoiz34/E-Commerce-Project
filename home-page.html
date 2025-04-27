@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce-Homepage</title>
+    <!-- Flowbite CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <!-- Flowbite CDN -->
+
+    <!-- Notyf CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <!-- Notyf CDN -->
+
+    <!-- font-Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- font-Awesome CDN -->
+    
+    <!-- google-fonts CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- google-fonts CDN -->
+
+    <!-- swiper js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- swiper js -->
+
+    <!-- tailwindcss -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- tailwindcss -->
+
+
+
+     
+</head>
+<body class="font-custom w-full" >
+    <!-- annoucement -->
+    <div class=" bg-black flex flex-row justify-between  items-center w-full p-1 gap-20">
+        <div class=" w-full justify-center items-center flex  gap-2">
+            <p class="font-base text-xs text-white sm:text-sm sm:text-center ">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</p>
+            <a class="font-semibold hover:underline hidden md:block text-white" href="#">Shop Now</a>
+        </div>    
+
+
+        <!-- Dropdown -->
+        <div class="w-56 hidden lg:block">
+            
+        <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">English <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+        </svg>
+        </button>
+        
+        <!-- Dropdown menu -->
+        <div id="dropdownHover" class="z-40  hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
+            <ul class=" py-2  text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
+            <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Arabic</a>
+            </li>
+            <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">German</a>
+            </li>
+            <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">French</a>
+            </li>
+            <li>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Urdu</a>
+            </li>
+            </ul>
+        </div>
+        
+        
+        </div>
+        <!-- Dropdown -->
+        
+    </div>
+    <!-- annoucement -->
+
+    <!-- Navbar start -->
+    <nav class="bg-white border-b-4 shadow-md md:h-auto h-15 px-6 md:px-8 sticky top-0 z-30 border-b-gray-300 flex justify-center dark:bg-gray-900">
+        <a class="flex items-center space-x-3 rtl:space-x-reverse">
+            <!-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" /> -->
+            <span class="self-center text-xl md:text-2xl whitespace-nowrap px-2 md:px-8 lg:px-0 w-full font-bold dark:text-white">Exclusive</span>
+        </a>
+        <div class=" w-full flex flex-wrap items-center justify-end gap-8 md:px-4 md:py-2 lg:py-4 lg:px-8">
+            <div class="flex md:order-2">
+                <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1">
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                    </svg>
+                    <span class="sr-only">Search</span>
+                </button>
+                <div class="relative hidden md:block">
+                    <input type="text" id="search-navbar" class="w-72 p-2 ps-10 text-sm text-gray-900 border  border-gray-300 rounded-sm bg-gray-50 focus:ring-white hidden lg:block dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white placeholder:text-sm" placeholder="What are you looking for ??">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 hidden lg:block dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                        </svg>
+                        <span class="sr-only">Search icon</span>
+                    </div>
+                </div>
+
+                <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg  md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                    </svg>
+                </button>
+                <div class="p-2 hidden lg:block" >
+                    <i class="fa-regular hover:text-red-600 text-2xl fa-heart px-5"></i>
+                    <i class="fa-regular text-2xl fa-cart-shopping px-5"></i>
+                </div>
+            </div>
+
+            <div class="items-center justify-center hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+                <div class="relative mt-3 md:hidden">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                        <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+                        </svg>
+                    </div>
+                    <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-white focus:border-white dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white" placeholder="Search...">
+                    
+                </div>
+
+                <ul class="flex flex-col p-6 md:p-0 mt-4  font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
+                    <!-- dropdown-language on medium -->
+                    <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown" data-dropdown-placement="right-start" type="button" class="flex items-center md:hidden  justify-between w-40 px-2 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">languages<svg class="w-2.5 h-2.5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                      </svg>
+                    </button>
+                    <div id="doubleDropdown" class="z-10 block md:hidden bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700">
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
+                        <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">English</a>
+                        </li>
+                        <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">French</a>
+                        </li>
+                        <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Urdu</a>
+                        </li>
+                        <li>
+                        <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Arabic</a>
+                        </li>
+                    </ul>
+                    </div>
+                    </li>
+                    <li>
+                        <a href="#" class="block hover:text-blue-600 py-2 px-3  text-gray-900 rounded-sm md:hover:bg-transparent md:p-0 ">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block hover:text-blue-600 py-2 px-3 text-gray-900 rounded-sm md:hover:bg-transparent md:p-0 ">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block hover:text-blue-600 py-2 px-3 text-gray-900 rounded-sm  md:hover:bg-transparent md:p-0 ">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block hover:text-blue-600 py-2 px-3 text-gray-900 rounded-sm  md:hover:bg-transparent md:p-0 ">Sign Up</a>
+                    </li>       
+                </ul>
+             </div>
+            
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- courosel start -->
+    <div class="hidden sm:flex justify-center items-center py-4 sm:py-2 md:py-0 lg:py-10  px-8 h-auto w-full">
+        <div id="default-carousel" class="relative w-full" data-carousel="slide">
+            <!-- Carousel wrapper -->
+            <div class="relative h-48 py-2 sm:h-52  overflow-hidden rounded-lg md:h-96">
+                <!-- Item 1 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./images/courosel-picture-one.png" class="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 2 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./images/courosel-picture-one.png" class="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 3 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./images/courosel-picture-one.png" class="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 4 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./images/courosel-picture-one.png" class="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+                <!-- Item 5 -->
+                <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                    <img src="./images/courosel-picture-one.png" class="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                </div>
+            </div>
+            <!-- Slider indicators -->
+            <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+                <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+            </div>
+            <!-- Slider controls -->
+            <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                    </svg>
+                    <span class="sr-only">Previous</span>
+                </span>
+            </button>
+            <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                    <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                    </svg>
+                    <span class="sr-only">Next</span>
+                </span>
+            </button>
+        </div>
+        </div>
+    <!-- courosel end -->
+
+    <!-- Sale-part start -->
+    <div class=" w-full h-auto px-7 py-0 ">
+        <div class="flex w-full items-end gap-4">
+            <div class="w-8 h-16 bg-[#DB4444] rounded-md"></div>
+            <p class="text-black font-semibold text-xl">
+                Today's
+            </p>
+            </div>
+
+            <div class="flex justify-start sm:justify-normal flex-row  w-full ">
+            <div class="flex-1 flex md:flex-row flex-col gap-8 sm:gap-0 justify-between m-4">
+                <div class="m-6 w-64 md:w-80">
+                    <span style="letter-spacing: 0.25rem;" class="text-xl md:text-4xl font-bold">Flash Sales</span>
+                </div>
+                
+                <div class="sm:flex flex-col hidden w-80 items-center space-y-4">
+                    <div class="flex space-x-6 text-xs font-medium ">
+                        <span>Days</span>
+                        <span>Hours</span>
+                        <span>Minutes</span>
+                        <span>Seconds</span>
+                    </div>
+                    
+                    <div class="flex space-x-2 text-4xl font-bold ">
+                        <span>03</span>
+                        <span class="text-red-600">:</span>
+                        <span>23</span>
+                        <span class="text-red-600">:</span>
+                        <span>19</span>
+                        <span class="text-red-600">:</span>
+                        <span>56</span>
+                    </div>
+                    </div> 
+            </div>
+
+                <div class="w-full flex-1 justify-end items-center sm:items-end hidden lg:flex gap-4">
+                    <a class="w-8 sm:w-10 flex justify-center text-lg hover:bg-gray-100 h-8 sm:h-10 bg-gray-200 rounded-full items-center "><i class="fa-solid fa-arrow-left"></i></a>
+                    <a class="w-8 sm:w-10 flex justify-center text-lg hover:bg-gray-100 h-8 sm:h-10 bg-gray-200 rounded-full items-center "><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                
+            </div>
+    </div> 
+
+    <!-- sale product lists -->
+        <div class=" w-full md:mt-10 mt-0 flex-wrap  items-center md:justify-normal justify-center  flex gap-2">
+            <div class="group flex w-full md:w-auto flex-col px-8 py-6 mt-4 ">
+            <div class="md:w-72 w-full bg-gray-200 h-64">
+                <div class="flex px-4 py-4 justify-between w-full">
+                    <button type="button" class="focus:outline-none text-white bg-[#DB4444] hover:bg-[#DB2222] focus:ring-4 focus:ring-yellow-300 font-medium rounded-none text-sm h-8 w-12 dark:focus:ring-yellow-900">-50%</button>
+                    <div class="w-8 sm:w-8  flex justify-center text-lg hover:bg-gray-200 h-8 sm:h-8 bg-gray-300 rounded-full items-center"><i class="fa-regular text-xl fa-heart"></i></div>
+                </div>
+                
+                <div class="flex w-full md:w-72 h-40">
+                    <div class="md:w-60 flex w-full  justify-center items-start" >
+                        <img src="./images/product-one.png" alt="">
+                    </div>
+                    <div class="hidden md:flex w-8  justify-center text-lg hover:bg-gray-200 h-8 bg-gray-300 rounded-full items-center"><i class="fa-solid first-line: text-xl fa-eye"></i></div>
+                </div>
+                <a href="" class="w-72 group-hover:flex hidden h-10 bg-black justify-center items-center  "><p class="text-base text-white font-semibold">ADD TO CART</p></a>
+            </div>
+            <div class="mt-2">
+                <span class="text-xl">HAVIT HV-G92 Gamepad</span>
+                <div class="flex gap-4 mt-2">
+                    <p class="text-xl text-[#DB4444]">$120</p>
+                    <p class="text-xl">$160</p>
+                </div>
+                <div>
+                    <i class="fa-solid text-[#DB4444] fa-star"></i>
+                    <i class="fa-solid text-[#DB4444] fa-star"></i>
+                    <i class="fa-solid text-[#DB4444] fa-star"></i>
+                    <i class="fa-solid text-[#DB4444] fa-star"></i>
+                    <i class="fa-solid text-[#DB4444] fa-star"></i>
+                </div>
+            </div>
+            </div>
+
+            <div class="group w-full md:w-auto flex flex-col px-8 py-6 mt-4 ">
+            <div class="md:w-72 w-full bg-gray-200 h-64">
+                <div class="flex px-4 py-4 justify-between w-full">
+                    <button type="button" class="focus:outline-none text-white bg-[#DB4444] hover:bg-[#DB2222] focus:ring-4 focus:ring-yellow-300 font-medium rounded-none text-sm h-8 w-12 dark:focus:ring-yellow-900">-50%</button>
+                    <div class="w-8 justify-center flex text-lg hover:bg-gray-200 h-8  bg-gray-300 rounded-full items-center"><i class="fa-regular text-xl fa-heart"></i></div>
+                </div>
+                
+                <div class=" flex w-full md:w-72 h-40">
+                    <div class="md:w-60 w-full flex justify-center items-start" >
+                        <img src="./images/product-2.png" alt="">
+                    </div>
+                    <div class=" hidden md:flex w-8 justify-center text-lg hover:bg-gray-200 h-8 bg-gray-300 rounded-full items-center"><i class="fa-solid first-line: text-xl fa-eye"></i></div>
+                </div>
+                <a href="" class="w-72 group-hover:flex hidden h-10 bg-black justify-center items-center  "><p class="text-base text-white font-semibold">ADD TO CART</p></a>
+            </div>
+            <!-- <div class="w-72 h-10 hover:block hidden bg-black rounded-md"></div> -->
+            <div class="mt-2">
+                <span class="text-xl">AK-900 Wired Keyboard</span>
+                <div class="flex gap-4 mt-2">
+                    <p class="text-xl text-[#DB4444]">$960</p>
+                    <p class="text-xl">$1160</p>
+                </div>
+                <div>
+                    <i class="fa-solid text-[#DB4444] fa-star"></i>
+                    <i class="fa-solid text-[#DB4444] fa-star"></i>
+                    <i class="fa-solid text-[#DB4444] fa-star"></i>
+                    <i class="fa-solid text-[#DB4444] fa-star"></i>
+                    <i class="fa-solid text-[#DB4444] fa-star"></i>
+                </div>
+            </div>
+            </div>
+
+            <div class="group w-full md:w-auto flex flex-col px-8 py-6 mt-4 ">
+            <div class="md:w-72 w-full bg-gray-200 h-64">
+                <div class="flex px-4 py-4 justify-between w-full">
+                    <button type="button" class="focus:outline-none text-white bg-[#DB4444] hover:bg-[#DC2222] focus:ring-4 focus:ring-yellow-300 font-medium rounded-none text-sm h-8 w-12 dark:focus:ring-yellow-900">-50%</button>
+                    <div class="w-8 sm:w-8  flex justify-center text-lg hover:bg-gray-200 h-8 sm:h-8 bg-gray-300 rounded-full items-center"><i class="fa-regular text-xl fa-heart"></i></div>
+                </div>
+                
+                <div class=" flex  w-full md:w-72 h-40">
+                    <div class="w-full md:w-60 flex justify-center items-start" >
+                        <img src="./images/product-3.png" alt="">
+                    </div>
+                    <div class="w-8 hidden md:flex justify-center text-lg hover:bg-gray-200 h-8  bg-gray-300 rounded-full items-center"><i class="fa-solid first-line: text-xl fa-eye"></i></div>
+                </div>
+                <a href="" class="w-72 group-hover:flex hidden h-10 bg-black justify-center items-center  "><p class="text-base text-white font-semibold">ADD TO CART</p></a>
+            </div>
+            <!-- <div class="w-72 h-10 hover:block hidden bg-black rounded-md"></div> -->
+            <div class="mt-2">
+                <span class="text-xl">IPS LCD Gaming Monitor</span>
+                <div class="flex gap-4 mt-2">
+                    <p class="text-xl text-[#DB4444]">$370</p>
+                    <p class="text-xl">$400</p>
+                </div>
+                <div>
+                    <i class="fa-solid text-[#DB4444] fa-star"></i>
+                    <i class="fa-solid text-[#DB4444] fa-star"></i>
+                    <i class="fa-solid text-[#DB4444] fa-star"></i>
+                    <i class="fa-solid text-[#DB4444] fa-star"></i>
+                    <i class="fa-solid text-[#DB4444] fa-star"></i>
+                </div>
+            </div>
+            </div>
+        </div>
+    <!-- sale product lists -->
+        <div class="w-full flex justify-center mt-8 h-30 border-b-4 shadow-md border-b-gray-200 items-center">
+            <button type="button" class="focus:outline-none text-white bg-[#DB4444] hover:bg-[#DB2222] focus:ring-4 focus:ring-yellow-300 font-medium rounded-none text-base h-10 w-40 dark:focus:ring-yellow-900">View All Products</button>
+        </div>
+    <!-- Sale-part end -->
+
+
+    <!-- category start -->
+
+    <!-- category upper -->
+    <div class=" w-full mt-20 px-7 py-0 h-auto">
+        <div class="flex w-full items-end gap-4">
+            <div class="w-8 h-16 bg-[#DB4444] rounded-md"></div>
+            <p class="text-black font-semibold text-xl">
+             Categories
+            </p>
+        </div>
+
+        <div class="flex justify-between">
+            <div class="m-6 w-full sm:w-full">
+                <span style="letter-spacing: 0.25rem;" class="text-xl  md:text-4xl font-bold">Browse By Category</span>
+            </div>
+            
+            <!-- problem -->
+            <!-- <div class="w-full flex-1 justify-end items-center sm:items-end hidden md:flex gap-4">
+                <a class="w-8 sm:w-10 flex justify-center text-lg hover:bg-gray-100 h-8 sm:h-10 bg-gray-200 rounded-full items-center swiper-button-next"></a>
+                <a class="w-8 sm:w-10 flex justify-center text-lg hover:bg-gray-100 h-8 sm:h-10 bg-gray-200 rounded-full items-center swiper-button-prev"></a>
+            </div> -->
+            <!-- problem -->
+        </div>
+    </div>        
+    <!-- category upper -->
+    
+    <!-- Categories -->
+    <div class="w-full mt-8 relative">
+   
+        <!-- Swiper Container -->
+        <div class="swiper h-32">
+          <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide group rounded-md px-6 py-8 border border-gray-400 hover:bg-[#DB4444] flex flex-col items-center justify-center w-full h-full  text-center">
+                <i class="fa-solid fa-mobile text-5xl group-hover:text-white"></i>
+                <p class="font-semibold text-lg mt-2 group-hover:text-white">Phone</p>
+                </div>
+        
+                <div class="swiper-slide group rounded-md px-6 py-8  border border-gray-400 hover:bg-[#DB4444] flex flex-col items-center justify-center  w-full h-full text-center">
+                <i class="fa-solid fa-desktop text-5xl group-hover:text-white"></i>
+                <p class="font-semibold text-lg mt-2 group-hover:text-white">Computer</p>
+                </div>
+        
+                <div class="swiper-slide group rounded-md px-6 py-8 border border-gray-400 hover:bg-[#DB4444] flex flex-col items-center justify-center w-full h-full  text-center">
+                <i class="fa-solid fa-headphones text-5xl group-hover:text-white"></i>
+                <p class="font-semibold text-lg mt-2 group-hover:text-white">Headphones</p>
+                </div>
+        
+                <div class="swiper-slide group rounded-md px-6 py-8  border border-gray-400 hover:bg-[#DB4444] flex flex-col items-center justify-center  w-full h-full  text-center">
+                <i class="fa-solid fa-camera text-5xl group-hover:text-white"></i>
+                <p class="font-semibold text-lg mt-2 group-hover:text-white">Camera</p>
+                </div>
+        
+                <div class="swiper-slide group rounded-md px-6 py-8 border border-gray-400 hover:bg-[#DB4444] flex flex-col items-center justify-center  w-full h-full text-center">
+                <i class="fa-solid fa-gamepad text-5xl group-hover:text-white"></i>
+                <p class="font-semibold text-lg mt-2 group-hover:text-white">Gaming</p>
+                </div>
+        
+                <div class="swiper-slide group rounded-md px-6 py-8 border border-gray-400 hover:bg-[#DB4444] flex flex-col items-center justify-center w-full  text-center">
+                <i class="fa-solid fa-stopwatch text-5xl group-hover:text-white"></i>
+                <p class="font-semibold text-lg mt-2 group-hover:text-white">Watch</p>
+                </div>
+             </div>
+        </div>
+    </div>    
+    <!-- Categories -->
+
+    <!-- category end -->
+
+<!-- best selling product -->
+    <div class="flex  h-auto border border-b-4 border-gray-200 shadow-md flex-col px-0 mt-20 py-2">
+        <div class=" w-full px-7 py-0 h-52">
+            <div class="flex w-full items-end gap-4">
+                <div class="w-8 h-16 bg-[#DB4444] rounded-md"></div>
+                <p class="text-black font-semibold text-xl">
+                    This month
+                </p>
+            </div>
+
+            <div class="flex justify-start sm:justify-normal flex-row  w-full ">
+                <div class="flex-1 flex md:flex-row flex-col gap-8 sm:gap-0 justify-between m-4">
+                     <div class="m-6 w-full sm:w-full">
+                    <span style="letter-spacing: 0.25rem;" class="text-xl  md:text-4xl font-bold">Best Selling Products</span>
+                </div>
+                    
+                    <button type="button" class="focus:outline-none text-white bg-[#DB4444] hover:bg-[#DB2222] focus:ring-4 focus:ring-yellow-300 font-medium rounded-none text-base h-10 w-40 dark:focus:ring-yellow-900">View All Products</button>
+                
+
+                </div>
+
+            </div>    
+        </div> 
+
+        <div class=" w-full mt-10 md:mt-0 flex-wrap  items-center md:justify-normal justify-center  flex gap-2">
+            <div class="group flex w-full md:w-auto flex-col px-8 py-4 mt-4 ">
+                <div class="md:w-72 w-full bg-gray-200 h-64">
+                    <div class="flex px-4 py-4 justify-end w-full">
+                        <div class="w-8 sm:w-8  flex justify-center text-lg hover:bg-gray-200 h-8 sm:h-8 bg-gray-300 rounded-full items-center"><i class="fa-regular text-xl fa-heart"></i></div>
+                    </div>
+                    
+                    <div class=" flex w-full md:w-72 h-40">
+                        <div class="md:w-60 flex w-full  justify-center items-start" >
+                            <img src="./images/speaker.png" alt="">
+                        </div>
+                        <div class="hidden md:flex w-8  justify-center text-lg hover:bg-gray-200 h-8 bg-gray-300 rounded-full items-center"><i class="fa-solid first-line: text-xl fa-eye"></i></div>
+                    </div>
+                    <a href="" class="w-72 group-hover:flex hidden h-10 bg-black justify-center items-center  "><p class="text-base text-white font-semibold">ADD TO CART</p></a>
+                </div>
+                <div class="mt-2">
+                    <span class="text-xl">RGB Liquid CPU Cooler</span>
+                    <div class="flex gap-4 mt-2">
+                        <p class="text-xl text-[#DB4444]">$120</p>
+                        <p class="text-xl">$160</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid text-[#DB4444] fa-star"></i>
+                        <i class="fa-solid text-[#DB4444] fa-star"></i>
+                        <i class="fa-solid text-[#DB4444] fa-star"></i>
+                        <i class="fa-solid text-[#DB4444] fa-star"></i>
+                        <i class="fa-solid text-[#DB4444] fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" group flex w-full md:w-auto flex-col px-8 py-4 mt-4 ">
+                <div class="md:w-72 w-full bg-gray-200 h-64">
+                    <div class="flex px-4 py-4 justify-end w-full">
+                        <div class="w-8 sm:w-8  flex justify-center text-lg hover:bg-gray-200 h-8 sm:h-8 bg-gray-300 rounded-full items-center"><i class="fa-regular text-xl fa-heart"></i></div>
+                    </div>
+                    
+                    <div class=" flex w-full md:w-72 h-40">
+                        <div class="md:w-60 flex w-full  justify-center items-start" >
+                            <img src="./images/jacket.png" alt="">
+                        </div>
+                        <div class="hidden md:flex w-8  justify-center text-lg hover:bg-gray-200 h-8 bg-gray-300 rounded-full items-center"><i class="fa-solid first-line: text-xl fa-eye"></i></div>
+                    </div>
+                    <a href="" class="w-72 group-hover:flex hidden h-10 bg-black justify-center items-center  "><p class="text-base text-white font-semibold">ADD TO CART</p></a>
+                </div>
+                <div class="mt-2">
+                    <span class="text-xl">The North Coat</span>
+                    <div class="flex gap-4 mt-2">
+                        <p class="text-xl text-[#DB4444]">$120</p>
+                        <p class="text-xl">$160</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid text-[#DB4444] fa-star"></i>
+                        <i class="fa-solid text-[#DB4444] fa-star"></i>
+                        <i class="fa-solid text-[#DB4444] fa-star"></i>
+                        <i class="fa-solid text-[#DB4444] fa-star"></i>
+                        <i class="fa-solid text-[#DB4444] fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group flex w-full md:w-auto flex-col px-8 py-4 mt-4 ">
+                <div class="md:w-72 w-full bg-gray-200 h-64">
+                    <div class="flex px-4 py-4 justify-end w-full">
+                        <div class="w-8 sm:w-8  flex justify-center text-lg hover:bg-gray-200 h-8 sm:h-8 bg-gray-300 rounded-full items-center"><i class="fa-regular text-xl fa-heart"></i></div>
+                    </div>
+                    
+                    <div class=" flex w-full md:w-72 h-40">
+                        <div class="md:w-60 flex w-full  justify-center items-start" >
+                            <img src="./images/bag.png" alt="">
+                        </div>
+                        <div class="hidden md:flex w-8  justify-center text-lg hover:bg-gray-200 h-8 bg-gray-300 rounded-full items-center"><i class="fa-solid first-line: text-xl fa-eye"></i></div>
+                    </div>
+                    <a href="" class="w-72 group-hover:flex hidden h-10 bg-black justify-center items-center  "><p class="text-base text-white font-semibold">ADD TO CART</p></a>
+
+                </div>
+                <div class="mt-2">
+                    <span class="text-xl">Gucci Duffle Bag</span>
+                    <div class="flex gap-4 mt-2">
+                        <p class="text-xl text-[#DB4444]">$120</p>
+                        <p class="text-xl">$160</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid text-[#DB4444] fa-star"></i>
+                        <i class="fa-solid text-[#DB4444] fa-star"></i>
+                        <i class="fa-solid text-[#DB4444] fa-star"></i>
+                        <i class="fa-solid text-[#DB4444] fa-star"></i>
+                        <i class="fa-solid text-[#DB4444] fa-star"></i>
+                    </div>
+                </div>
+                </div>
+
+            <div class="group flex w-full md:w-auto flex-col px-8 py-4 mt-4 ">
+                <div class="md:w-72 w-full bg-gray-200 h-64">
+                    <div class="flex px-4 py-4 justify-end w-full">
+                        <div class="w-8 sm:w-8  flex justify-center text-lg hover:bg-gray-200 h-8 sm:h-8 bg-gray-300 rounded-full items-center"><i class="fa-regular text-xl fa-heart"></i></div>
+                    </div>
+                    
+                    <div class=" flex w-full md:w-72 h-40">
+                        <div class="md:w-60 flex w-full  justify-center items-start" >
+                            <img src="./images/table.png" alt="">
+                        </div>
+                        <div class="hidden md:flex w-8  justify-center text-lg hover:bg-gray-200 h-8 bg-gray-300 rounded-full items-center"><i class="fa-solid first-line: text-xl fa-eye"></i></div>
+                    </div>
+                    <a href="" class="w-72 group-hover:flex hidden h-10 bg-black justify-center items-center  "><p class="text-base text-white font-semibold">ADD TO CART</p></a>
+                </div>
+                <div class="mt-2">
+                    <span class="text-xl">Small Book Shelf</span>
+                    <div class="flex gap-4 mt-2">
+                        <p class="text-xl text-[#DB4444]">$120</p>
+                        <p class="text-xl">$160</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid text-[#DB4444] fa-star"></i>
+                        <i class="fa-solid text-[#DB4444] fa-star"></i>
+                        <i class="fa-solid text-[#DB4444] fa-star"></i>
+                        <i class="fa-solid text-[#DB4444] fa-star"></i>
+                        <i class="fa-solid text-[#DB4444] fa-star"></i>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+<!-- best selling product -->
+
+<!-- music -->
+ <div class="px-6 mt-20 py-2"> 
+    <div class="w-full flex lg:flex-row flex-col h-210 sm:h-200 md:h-260 lg:h-130 bg-black">
+        <div class="px-14 py-22 text-start flex-1">
+            <p class="text-[#00FF66] text-base font-semibold">Categories</p>
+            <div class="mt-8">
+                <span class="text-3xl sm:text-4xl md:text-6xl text-white font-bold">Enhance Your Music Experience</span>
+            </div>
+            <div class="flex sm:flex-row flex-col gap-2 mt-8">
+                <div class="w-full h-10 rounded-sm sm:w-14 sm:h-14 px-2 sm:px-0 sm:rounded-full flex flex-row justify-between sm:justify-center sm:flex-col  items-center bg-white">
+                    <p class="text-xs font-semibold">Days</p>
+                    <p class="text-xs font-semibold">23</p>
+                </div>
+                <div class="w-full h-10 rounded-sm sm:w-14 sm:h-14 px-2 sm:px-0 sm:rounded-full flex flex-row justify-between sm:justify-center sm:flex-col  items-center bg-white">
+                    <p class="text-xs font-semibold">Hours</p>
+                    <p class="text-xs font-semibold">05</p>
+                </div>
+                <div class="w-full h-10 rounded-sm sm:w-14 sm:h-14 px-2 sm:px-0 sm:rounded-full flex flex-row justify-between sm:justify-center sm:flex-col  items-center bg-white">
+                    <p class="text-xs font-semibold">Minutes</p>
+                    <p class="text-xs font-semibold">59</p>
+                </div>
+                <div class="w-full h-10 rounded-sm sm:w-14 sm:h-14 px-2 sm:px-0 sm:rounded-full flex flex-row justify-between sm:justify-center sm:flex-col  items-center bg-white" >
+                    <p class="text-xs font-semibold">Seconds</p>
+                    <p class="text-xs font-semibold">35</p>
+                </div>
+            </div>
+            <div class="mt-8">
+                <button type="button" class="focus:outline-none text-white bg-[#00FF66] hover:bg-[#00FF33] focus:ring-4 focus:ring-yellow-300 font-medium rounded-md text-base w-full h-10 sm:h-10 sm:w-40 dark:focus:ring-yellow-900">Buy Now !</button>
+            </div>
+        </div>
+        <div class="flex-1 flex items-center justify-center w-full h-20 md:h-120 my-auto  mx-auto">
+            <img src="./images/speaker02.png" alt="" class="relative w-full -mt-8">
+        </div>
+       
+    </div>
+ </div>
+<!-- music -->
+
+
+<!-- explore products -->
+<!-- upper -->
+<div class=" w-full mt-20 px-7 py-0 h-52">
+    <div class="flex w-full items-end gap-4">
+        <div class="w-8 h-16 bg-[#DB4444] rounded-md"></div>
+        <p class="text-black font-semibold text-xl">
+         Our Products
+        </p>
+    </div>
+
+    <div class="flex justify-between">
+        <div class="m-6 w-full sm:w-full">
+            <span style="letter-spacing: 0.25rem;" class="text-xl  md:text-4xl font-bold">Explore Our Products</span>
+        </div>
+
+        <div class="w-full flex-1 justify-end items-center sm:items-end hidden md:flex gap-4">
+            <div class="w-8 sm:w-10 flex justify-center text-lg hover:bg-gray-100 h-8 sm:h-10 bg-gray-200 rounded-full items-center"><i class="fa-solid fa-arrow-left"></i></div>
+            <div class="w-8 sm:w-10 flex justify-center text-lg hover:bg-gray-100 h-8 sm:h-10 bg-gray-200 rounded-full items-center"><i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+    </div>
+</div>  
+<!-- upper -->
+
+<!-- products -->
+<div class="px-6 py-2 w-full h-auto ">
+     <div class=" w-full mt-10 md:mt-0 flex-wrap  items-center md:justify-normal justify-center  flex gap-2">
+        <div class="group flex w-full md:w-auto flex-col px-7 py-6 mt-4 ">
+            <div class="md:w-72 w-full bg-gray-200 h-64">
+                <div class="flex px-4 py-4 justify-end w-full">
+                    <div class="w-8 sm:w-8  flex justify-center text-lg hover:bg-gray-200 h-8 sm:h-8 bg-gray-300 rounded-full items-center"><i class="fa-regular text-xl fa-heart"></i></div>
+                </div>
+                
+                <div class="flex w-full md:w-72 h-40">
+                    <div class="md:w-60 flex w-full  justify-center items-start" >
+                        <img src="./images/product-one.png" alt="">
+                    </div>
+                    <div class="hidden md:flex w-8  justify-center text-lg hover:bg-gray-200 h-8 bg-gray-300 rounded-full items-center"><i class="fa-solid first-line: text-xl fa-eye"></i></div>
+                </div>
+                <div class="w-72 group-hover:flex hidden h-10 bg-black justify-center items-center  "><p class="text-base text-white font-semibold">ADD TO CART</p></div>
+        </div>
+        <div class="mt-2">
+            <span class="text-xl">HAVIT HV-G92 Gamepad</span>
+            <div class="flex gap-4 mt-2">
+                <p class="text-xl text-[#DB4444]">$120</p>
+                <p class="text-xl">$160</p>
+            </div>
+            <div>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+            </div>
+        </div>
+     </div>
+     
+     <div class="group w-full md:w-auto flex flex-col px-7 py-6 mt-4 ">
+        <div class="md:w-72 w-full bg-gray-200 h-64">
+            <div class="flex px-4 py-4 justify-end w-full">
+                <div class="w-8 justify-center flex text-lg hover:bg-gray-200 h-8  bg-gray-300 rounded-full items-center"><i class="fa-regular text-xl fa-heart"></i></div>
+            </div>
+            
+            <div class=" flex w-full md:w-72 h-40">
+                <div class="md:w-60 w-full flex justify-center items-start" >
+                    <img src="./images/product-2.png" alt="">
+                </div>
+                <div class=" hidden md:flex w-8 justify-center text-lg hover:bg-gray-200 h-8 bg-gray-300 rounded-full items-center"><i class="fa-solid first-line: text-xl fa-eye"></i></div>
+            </div>
+            <div class="w-72 group-hover:flex hidden h-10 bg-black justify-center items-center  "><p class="text-base text-white font-semibold">ADD TO CART</p></div>
+        </div>
+        <!-- <div class="w-72 h-10 hover:block hidden bg-black rounded-md"></div> -->
+        <div class="mt-2">
+            <span class="text-xl">AK-900 Wired Keyboard</span>
+            <div class="flex gap-4 mt-2">
+                <p class="text-xl text-[#DB4444]">$960</p>
+                <p class="text-xl">$1160</p>
+            </div>
+            <div>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+            </div>
+        </div>
+     </div>
+     
+     <div class="group w-full md:w-auto flex flex-col px-7 py-6 mt-4 ">
+        <div class="md:w-72 w-full bg-gray-200 h-64">
+            <div class="flex px-4 py-4 justify-end w-full">
+                <div class="w-8 sm:w-8  flex justify-center text-lg hover:bg-gray-200 h-8 sm:h-8 bg-gray-300 rounded-full items-center"><i class="fa-regular text-xl fa-heart"></i></div>
+            </div>
+            
+            <div class=" flex  w-full md:w-72 h-40">
+                <div class="w-full md:w-60 flex justify-center items-start" >
+                    <img src="./images/product-3.png" alt="">
+                </div>
+                <div class="w-8 hidden md:flex justify-center text-lg hover:bg-gray-200 h-8  bg-gray-300 rounded-full items-center"><i class="fa-solid first-line: text-xl fa-eye"></i></div>
+            </div>
+            <div class="w-72 group-hover:flex hidden h-10 bg-black justify-center items-center  "><p class="text-base text-white font-semibold">ADD TO CART</p></div>
+        </div>
+        <!-- <div class="w-72 h-10 hover:block hidden bg-black rounded-md"></div> -->
+        <div class="mt-2">
+            <span class="text-xl">IPS LCD Gaming Monitor</span>
+            <div class="flex gap-4 mt-2">
+                <p class="text-xl text-[#DB4444]">$370</p>
+                <p class="text-xl">$400</p>
+            </div>
+            <div>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+            </div>
+        </div>
+     </div>
+     
+     <div class="group w-full md:w-auto flex flex-col px-7 py-6 mt-4 ">
+        <div class="md:w-72 w-full bg-gray-200 h-64">
+            <div class="flex px-4 py-4 justify-end w-full">
+                <div class="w-8 sm:w-8  flex justify-center text-lg hover:bg-gray-200 h-8 sm:h-8 bg-gray-300 rounded-full items-center"><i class="fa-regular text-xl fa-heart"></i></div>
+            </div>
+            
+            <div class=" flex  w-full md:w-72 h-40">
+                <div class="w-full md:w-60 flex justify-center items-start" >
+                    <img src="./images/product-3.png" alt="">
+                </div>
+                <div class="w-8 hidden md:flex justify-center text-lg hover:bg-gray-200 h-8  bg-gray-300 rounded-full items-center"><i class="fa-solid first-line: text-xl fa-eye"></i></div>
+            </div>
+            <div class="w-72 group-hover:flex hidden h-10 bg-black justify-center items-center  "><p class="text-base text-white font-semibold">ADD TO CART</p></div>
+        </div>
+        <!-- <div class="w-72 h-10 hover:block hidden bg-black rounded-md"></div> -->
+        <div class="mt-2">
+            <span class="text-xl">IPS LCD Gaming Monitor</span>
+            <div class="flex gap-4 mt-2">
+                <p class="text-xl text-[#DB4444]">$370</p>
+                <p class="text-xl">$400</p>
+            </div>
+            <div>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+            </div>
+        </div>
+     </div>
+     </div>
+     
+     <div class=" w-full mt-10 md:mt-0 flex-wrap  items-center md:justify-normal justify-center  flex gap-2">
+        <div class="group flex w-full md:w-auto flex-col px-7 py-6 mt-4 ">
+            <div class="md:w-72 w-full bg-gray-200 h-64">
+                <div class="flex px-4 py-4 justify-end w-full">
+                    <div class="w-8 sm:w-8  flex justify-center text-lg hover:bg-gray-200 h-8 sm:h-8 bg-gray-300 rounded-full items-center"><i class="fa-regular text-xl fa-heart"></i></div>
+                </div>
+                
+                <div class="flex w-full md:w-72 h-40">
+                    <div class="md:w-60 flex w-full  justify-center items-start" >
+                        <img src="./images/product-one.png" alt="">
+                    </div>
+                    <div class="hidden md:flex w-8  justify-center text-lg hover:bg-gray-200 h-8 bg-gray-300 rounded-full items-center"><i class="fa-solid first-line: text-xl fa-eye"></i></div>
+                </div>
+                <div class="w-72 group-hover:flex hidden h-10 bg-black justify-center items-center  "><p class="text-base text-white font-semibold">ADD TO CART</p></div>
+        </div>
+        <div class="mt-2">
+            <span class="text-xl">HAVIT HV-G92 Gamepad</span>
+            <div class="flex gap-4 mt-2">
+                <p class="text-xl text-[#DB4444]">$120</p>
+                <p class="text-xl">$160</p>
+            </div>
+            <div>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+            </div>
+        </div>
+     </div>
+     
+     <div class="group w-full md:w-auto flex flex-col px-7 py-6 mt-4 ">
+        <div class="md:w-72 w-full bg-gray-200 h-64">
+            <div class="flex px-4 py-4 justify-end w-full">
+                <div class="w-8 justify-center flex text-lg hover:bg-gray-200 h-8  bg-gray-300 rounded-full items-center"><i class="fa-regular text-xl fa-heart"></i></div>
+            </div>
+            
+            <div class=" flex w-full md:w-72 h-40">
+                <div class="md:w-60 w-full flex justify-center items-start" >
+                    <img src="./images/product-2.png" alt="">
+                </div>
+                <div class=" hidden md:flex w-8 justify-center text-lg hover:bg-gray-200 h-8 bg-gray-300 rounded-full items-center"><i class="fa-solid first-line: text-xl fa-eye"></i></div>
+            </div>
+            <div class="w-72 group-hover:flex hidden h-10 bg-black justify-center items-center  "><p class="text-base text-white font-semibold">ADD TO CART</p></div>
+        </div>
+        <!-- <div class="w-72 h-10 hover:block hidden bg-black rounded-md"></div> -->
+        <div class="mt-2">
+            <span class="text-xl">AK-900 Wired Keyboard</span>
+            <div class="flex gap-4 mt-2">
+                <p class="text-xl text-[#DB4444]">$960</p>
+                <p class="text-xl">$1160</p>
+            </div>
+            <div>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+            </div>
+        </div>
+     </div>
+     
+     <div class="group w-full md:w-auto flex flex-col px-7 py-6 mt-4 ">
+        <div class="md:w-72 w-full bg-gray-200 h-64">
+            <div class="flex px-4 py-4 justify-end w-full">
+                <div class="w-8 sm:w-8  flex justify-center text-lg hover:bg-gray-200 h-8 sm:h-8 bg-gray-300 rounded-full items-center"><i class="fa-regular text-xl fa-heart"></i></div>
+            </div>
+            
+            <div class=" flex  w-full md:w-72 h-40">
+                <div class="w-full md:w-60 flex justify-center items-start" >
+                    <img src="./images/product-3.png" alt="">
+                </div>
+                <div class="w-8 hidden md:flex justify-center text-lg hover:bg-gray-200 h-8  bg-gray-300 rounded-full items-center"><i class="fa-solid first-line: text-xl fa-eye"></i></div>
+            </div>
+            <div class="w-72 group-hover:flex hidden h-10 bg-black justify-center items-center  "><p class="text-base text-white font-semibold">ADD TO CART</p></div>
+        </div>
+        <!-- <div class="w-72 h-10 hover:block hidden bg-black rounded-md"></div> -->
+        <div class="mt-2">
+            <span class="text-xl">IPS LCD Gaming Monitor</span>
+            <div class="flex gap-4 mt-2">
+                <p class="text-xl text-[#DB4444]">$370</p>
+                <p class="text-xl">$400</p>
+            </div>
+            <div>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+            </div>
+        </div>
+     </div>
+     
+     <div class="group w-full md:w-auto flex flex-col px-7 py-6 mt-4 ">
+        <div class="md:w-72 w-full bg-gray-200 h-64">
+            <div class="flex px-4 py-4 justify-end w-full">
+                <div class="w-8 sm:w-8  flex justify-center text-lg hover:bg-gray-200 h-8 sm:h-8 bg-gray-300 rounded-full items-center"><i class="fa-regular text-xl fa-heart"></i></div>
+            </div>
+            
+            <div class=" flex  w-full md:w-72 h-40">
+                <div class="w-full md:w-60 flex justify-center items-start" >
+                    <img src="./images/product-3.png" alt="">
+                </div>
+                <div class="w-8 hidden md:flex justify-center text-lg hover:bg-gray-200 h-8  bg-gray-300 rounded-full items-center"><i class="fa-solid first-line: text-xl fa-eye"></i></div>
+            </div>
+            <div class="w-72 group-hover:flex hidden h-10 bg-black justify-center items-center  "><p class="text-base text-white font-semibold">ADD TO CART</p></div>
+        </div>
+        <!-- <div class="w-72 h-10 hover:block hidden bg-black rounded-md"></div> -->
+        <div class="mt-2">
+            <span class="text-xl">IPS LCD Gaming Monitor</span>
+            <div class="flex gap-4 mt-2">
+                <p class="text-xl text-[#DB4444]">$370</p>
+                <p class="text-xl">$400</p>
+            </div>
+            <div>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+                <i class="fa-solid text-[#DB4444] fa-star"></i>
+            </div>
+        </div>
+     </div>
+     </div> 
+     
+     <div class="mt-6 text-center">
+        <button type="button" class="focus:outline-none text-white bg-[#DB4444] hover:bg-[#DB2222] focus:ring-4 focus:ring-yellow-300 font-medium rounded-none text-base h-10 w-40 dark:focus:ring-yellow-900">View All Products</button>
+    </div>
+
+</div>
+
+<!-- products -->
+
+<!-- explore products -->
+
+
+<!-- new arrival -->
+ <div class="px-6 py-2 w-full h-auto ">
+    <!-- upper -->
+    <div class=" w-full mt-20 px-7 py-0 h-52">
+        <div class="flex w-full items-end gap-4">
+            <div class="w-8 h-16 bg-[#DB4444] rounded-md"></div>
+            <p class="text-black font-semibold text-xl">
+            Featured
+            </p>
+        </div>
+    
+        <div class="flex justify-between">
+            <div class="m-6 w-full sm:w-full">
+                <span style="letter-spacing: 0.25rem;" class="text-xl  md:text-4xl font-bold">New Arrival</span>
+            </div>
+    
+            <div class="w-full flex-1 justify-end items-center sm:items-end hidden md:flex gap-4">
+                <div class="w-8 sm:w-10 flex justify-center text-lg hover:bg-gray-100 h-8 sm:h-10 bg-gray-200 rounded-full items-center"><i class="fa-solid fa-arrow-left"></i></div>
+                <div class="w-8 sm:w-10 flex justify-center text-lg hover:bg-gray-100 h-8 sm:h-10 bg-gray-200 rounded-full items-center"><i class="fa-solid fa-arrow-right"></i></div>
+            </div>
+        </div>
+    </div>  
+    <!-- upper -->
+
+    <!-- grid -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4 p-6">
+        <!-- PlayStation  -->
+        <div class="relative bg-black rounded-lg overflow-hidden h-48 md:h-64 lg:h-[32rem] ">
+          <img src="./images/ps5-grid.png" alt="PlayStation 5" class="w-full h-full object-contain brightness-75" />
+          <div class="absolute bottom-4 left-4 text-white">
+            <h2 class="text-xl sm:text-2xl font-bold">PlayStation 5</h2>
+            <p class="mt-1 text-xs sm:text-base font-sans">
+              Black and White version of the PS5 coming out on sale.
+            </p>
+            <a href="#" class="mt-3 inline-block text-xs sm:text-sm hover:underline">Shop Now</a>
+          </div>
+        </div>
+      
+        <div class="grid grid-cols-1 gap-4">
+
+          <!-- Women’s Collections -->
+          <div class="relative bg-black rounded-lg overflow-hidden h-48 md:h-64 lg:h-64">
+            <img src="./images/women-grid.png" alt="Women’s Collections" class="w-full h-full object-contain brightness-75" />
+            <div class="absolute bottom-4 left-4 text-white">
+              <h2 class="text-xl sm:text-2xl font-bold">Women’s Collections</h2>
+              <p class="mt-1 text-xs sm:text-base font-sans">
+                Featured women’s collections that give you another vibe.
+              </p>
+              <a href="#" class="mt-3 inline-block text-xs sm:text-sm hover:underline">Shop Now</a>
+            </div>
+          </div>
+      
+          <!-- Speakers & Perfume mini-grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <!-- Speakers -->
+            <div class="relative bg-black rounded-lg overflow-hidden h-48 md:h-64 lg:h-60">
+                <img src="./images/speaker-grid.png" class="w-full h-full object-contain brightness-75" />
+              <div class="absolute bottom-4 left-4 text-white">
+                <h3 class="text-base sm:text-xl font-bold">Speakers</h3>
+                <p class="mt-1 text-xs sm:text-base font-sans">Amazon wireless speakers</p>
+                <a href="#" class="mt-2 inline-block text-xs hover:underline">Shop Now</a>
+              </div>
+            </div>
+      
+            <!-- Perfume -->
+            <div class="relative bg-black rounded-lg overflow-hidden h-48 md:h-64 lg:h-60">
+              <img src="./images/perfume-grid.png" alt="Perfume" class="w-full h-full object-contain brightness-75" />
+              <div class="absolute bottom-4 left-4 text-white">
+                <h3 class="text-base sm:text-xl font-bold">Perfume</h3>
+                <p class="mt-1 text-xs sm:text-base  font-sans">Gucci intense oud edp</p>
+                <a href="#" class="mt-2 inline-block text-xs font hover:underline">Shop Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <!-- grid -->
+ </div>
+<!-- new arrival -->
+
+
+<!-- Delivery-coustomer-money -->
+
+<div class="px-15 py-15 h-auto  flex justify-center items-center w-full flex-col md:flex-row">
+    <div class=" w-full mt-3 justify-center items-center flex flex-col">
+        <div class="flex flex-none justify-center items-center">
+            <img src="./images/circle.png" alt="">
+            <i class="fa-solid text-2xl -left-14 text-white relative fa-truck"></i>
+        </div>
+        <span class="font-bold  mt-4 text-base">FREE AND FAST DELIVERY</span>
+        <p class="text-xs font-medium  mt-1">Free delivery for all orders over $140</p>
+    </div>
+    
+    <div class="w-full mt-3 justify-center items-center flex flex-col">
+        <div class="flex flex-none justify-center items-center">
+            <img src="./images/circle.png" alt="" >
+            <i class="fa-solid text-2xl -left-13 text-white relative fa-headset"></i>
+        </div>
+        <span class="font-bold mt-4 text-base">24/7 CUSTOMER SERVICE</span>
+        <p class="text-xs mt-1 font-medium ">Friendly 24/7 customer support</p>
+    </div>
+    
+    <div class="w-full mt-3 justify-center items-center flex flex-col">
+        <div class="flex flex-none justify-center items-center">
+            <img src="./images/circle.png" alt="" >
+            <i class="fa-solid text-2xl -left-13 text-white relative fa-shield"></i>
+        </div>
+        <span class="font-bold mt-4 text-base ">MONEY BACK GUARANTEE</span>
+        <p class="text-xs mt-1 font-medium  ">We reurn money within 30 days</p>
+    </div>
+</div>
+<!-- Delivery-coustomer-money -->
+
+<!-- footer -->
+ <div class="px-10 flex justify-between border border-b-4 border-gray-100 shadow-md flex-col flex-wrap md:flex-row py-8 h-auto w-full bg-black">
+    <div class="w-full flex-1 mt-8 md:justify-normal justify-center items-center md:items-start flex flex-col gap-6">
+        <p class="text-2xl text-white ">Exclusive</p>
+        <p class="text-base  font-bold text-white ">Subscribe</p>
+        <p class="text-sm  text-white ">Get 10% off your first order</p>
+        <div class="h-10 w-30  px-28 py-4 border-white border hover:border-b-4 flex  justify-center items-center outline-none rounded-sm">
+            <input class="border-none bg-transparent outline-none focus:white" type="email" placeholder="Enter your Email">
+            <i class="fa-solid  text-white relative -left-6  fa-paper-plane"></i>
+        </div>
+    </div>
+
+    <div class="w-full flex flex-1 md:flex-row flex-col gap-24 py-10 md:items-start items-center justify-center md:justify-end">
+       <div class="w-30 flex-1 flex flex-col gap-4">
+        <span class="text-2xl text-white  font-bold ">Support</span>
+        <p class="text-base  text-white ">Pakistan, Karachi</p>
+        <p class="text-base  text-white ">exclusive@gmail.com</p>
+        <p class="text-base  text-white ">+88015-88888-9999</p>
+       </div> 
+
+       <div class="w-30 flex-1 flex flex-col gap-4">
+        <span class="text-2xl text-white  font-bold ">Account</span>
+        <a class="text-base  decoration-none text-white ">My Account</a>
+        <a class="text-base  decoration-none text-white ">Login / Register</a>
+        <a class="text-base decoration-none  text-white ">Cart</a>
+        <a class="text-base decoration-none  text-white ">Wishlist</a>
+        <a class="text-base decoration-none  text-white ">Shop</a>
+       </div> 
+
+       <div class="w-30 flex-1 flex flex-col gap-4">
+        <span class="text-2xl text-white  font-bold ">Quick link</span>
+        <a class="text-base decoration-none  text-white ">Privacy Policy </a>
+        <a class="text-base decoration-none  text-white ">Terms Of Use</a>
+        <a class="text-base decoration-none  text-white ">FAQ</a>
+        <a class="text-base decoration-none  text-white ">Connect</a>
+       </div> 
+    </div>
+
+    <div class="w-full sm:w-full flex sm:px-18 sm:py-10 justify-center items-center flex-1 flex-col gap-2">
+     <span class="text-2xl text-white  font-bold">Download App</span>
+     <p class="text-white text-sm">Save $3 with App New User Only</p>
+     <div class="w-full justify-center items-center mt-10 flex flex-col gap-5 md:flex-row ">
+            <img src="./images/Qrcode 1.png" alt="QR Code" class=" object-cover">
+            <div class="flex flex-col md:flex-col gap-2">
+                <img src="./images/download-appstore.png" alt="Google Play" class="w-24">
+                <img src="./images/GooglePlay.png" alt="App Store" class="w-24">
+            </div>
+     </div>
+    </div>
+
+    
+</div>
+<div class="w-full h-20 py-6 text-center bg-black">
+    <p class="text-white text-xl font-semibold">Made By RMH-Team </p>
+</div>
+<!-- footer -->
+
+
+
+
+
+
+<!-- scripts -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- swiper -->
+    <script src="home-page.js"></script>
+    
+    <!-- scripts -->
+</body>
+</html>
